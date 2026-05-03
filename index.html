@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمال عبد العزيز الفيفي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(to left, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .icon-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        /* تصميم الأيقونة الدائرية */
+        .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-radius: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 45px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+            transition: 0.4s;
+        }
+
+        .icon-card:hover .icon-wrapper {
+            transform: rotate(10deg) scale(1.1);
+            border-radius: 50%;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent);
+            color: #0f172a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>مجموعة مشاريع الفيفي</h1>
+    <p>حلول تعليمية وتصاميم تقنية متكاملة</p>
+</header>
+
+<div class="container">
+    
+    <a href="رابط-موقعك-هنا" class="icon-card">
+        <span class="badge">الأكثر زيارة</span>
+        <div class="icon-wrapper">
+            <i class="fas fa-brain"></i>
+        </div>
+        <h3 class="card-title">محاكي القدرات</h3>
+        <p class="card-desc">تجربة اختبار واقعية للقسم اللفظي مع تحليل فوري للنتائج عبر Firebase.</p>
+    </a>
+
+    <a href="رابط-موقعك-هنا" class="icon-card">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+            <i class="fas fa-store"></i>
+        </div>
+        <h3 class="card-title">فولتشر Vulture</h3>
+        <p class="card-desc">بوابة الخدمات الرقمية والاشتراكات. فخامة في الاختيار وسرعة في التنفيذ.</p>
+    </a>
+
+    <a href="رابط-جيت-هب-حقك" class="icon-card">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+            <i class="fab fa-github"></i>
+        </div>
+        <h3 class="card-title">مختبر الأكواد</h3>
+        <p class="card-desc">استعراض لجميع المستودعات والمشاريع البرمجية المفتوحة المصدر.</p>
+    </a>
+
+    <a href="رابط-التحدي" class="icon-card">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
+            <i class="fas fa-trophy"></i>
+        </div>
+        <h3 class="card-title">تحدي اليوم</h3>
+        <p class="card-desc">سلسلة اختبارات ذكية متجددة يومياً لتطوير مهارات الطلاب الأكاديمية.</p>
+    </a>
+
+</div>
+
+<footer>
+    تم التصميم بكل فخر بواسطة عبد العزيز الفيفي &copy; 2026
+</footer>
+
+</body>
+</html>
+
